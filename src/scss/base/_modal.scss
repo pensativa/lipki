@@ -1,0 +1,143 @@
+.modal__button {
+    width: 159px;
+    height: 159px;
+    background: #D38E1F;
+    border: 8px solid #F8E9D2;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+
+@media (min-width: 992px) {
+    .modal-dialog {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .modal-dialog {
+        max-width: 1300px;
+    }
+}
+
+.modal__header {
+    border-bottom: none;
+    display: block;
+    position: relative;
+    padding: 65px 10px 28px;
+
+    & .modal-title {
+        font-family: $title-font;
+        font-weight: 400;
+        font-size: 45px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    & .acc {
+        text-align: center;
+        color: $main-color;
+    }
+
+    & .btn-close {
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        opacity: 0.3;
+    }
+}
+
+.modal__contant {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background: #fff url('../img/callback-bg.svg') no-repeat bottom right;
+    border: none;
+}
+
+.modal__form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+
+    & label {
+        display: block;
+        color: #000000;
+        margin-bottom: 14px;
+        width: 100%;
+    }
+
+    & input,
+    & textarea {
+        border: 1px solid #E1B164;
+        border-radius: 15px;
+        background-color: #fff;
+        width: 100%;
+
+        &::placeholder {
+            color: #CCCBCB;
+        }
+    }
+
+    & input {
+        height: 63px;
+
+    }
+
+    & .input-group-text {
+        border: 1px solid #E1B164;
+        background: rgba(225, 177, 100, 0.58);
+        border-radius: 15px 0px 0px 15px;
+        padding: 14px 22px;
+
+        & img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+.modal__item {
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+.modal__footer {
+    text-align: center;
+    margin: 70px 0 60px;
+    width: 100%;
+
+    & .button {
+        padding: 13px 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal__button {
+        width: 95px;
+        height: 95px;
+        font-size: 11px;
+    }
+    .modal__form {
+        max-width: 98%;
+    }
+    .modal__header .modal-title {
+        font-size: 25px;
+    }
+    .modal__item {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .modal__form input {
+        height: 45px;
+    }
+    .modal__form .input-group-text {
+        padding: 4px 12px;
+    }
+    .modal__footer {
+        margin: 60px 0 20px;
+    }
+}

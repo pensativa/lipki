@@ -1,0 +1,123 @@
+.front-banner {
+    background: url('../img/main-bg.jpg') no-repeat center/cover;
+    margin-bottom: 110px;
+    padding-bottom: 97px;
+
+    & .header {
+        background: transparent;
+
+        &.scroll,
+        &.open {
+            background-color: #fff;
+        }
+
+        &.scroll {
+            position: fixed;
+            width: 100%;
+        }
+    }
+
+    & .header .navbar-toggler::before {
+        background-image: url('../img/menu-o.svg');
+    }
+}
+
+.front-banner__title {
+    font-family: $title-font;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #000;
+    padding: 300px 0 50px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+
+    &::after {
+        content: '';
+        width: 309px;
+        height: 5px;
+        display: block;
+        margin-top: 20px;
+        background: linear-gradient(90deg, #D38E1F 0%, rgba(211, 142, 31, 0.26) 103.72%);
+    }
+}
+
+.front-banner__subtitle {
+    font-size: 35px;
+    margin: 0 auto 97px;
+    text-align: center;
+    font-weight: 400;
+    width: 895px;
+    
+    &::after {
+        content: '';
+        width: 309px;
+        height: 5px;
+        display: block;
+        margin-top: 20px;
+        background: linear-gradient(-90deg, #D38E1F 0%, rgba(211, 142, 31, 0.26) 103.72%);
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1400px) {
+    .front-banner__title {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .front-banner__title {
+        font-size: 44px;
+        padding-top: 240px;
+    }
+    .front-banner__subtitle {
+        font-size: 30px;
+        width: 770px;
+    }
+}
+
+@media (max-width: 992px) {
+    .front-banner__title {
+        font-size: 32px;
+        padding-top: 160px;
+    }
+    .front-banner__subtitle {
+        font-size: 24px;
+        width: 620px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .front-banner__title {
+        font-size: 30px;
+        padding-top: 130px;
+        padding-bottom: 20px;
+        width: 259px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        &::after {
+            margin-left: auto;
+            width: 125px;
+            height: 2px;
+            background:  linear-gradient(-90deg, #D38E1F 0%, rgba(211, 142, 31, 0.26) 103.72%);
+        }
+        &::before {
+            content: '';
+            width: 125px;
+            height: 2px;
+            display: block;
+            background:  linear-gradient(90deg, #D38E1F 0%, rgba(211, 142, 31, 0.26) 103.72%);
+        }
+    }
+    .front-banner__subtitle {
+        font-size: 16px;
+        width: auto;
+
+        &::after {
+            display: none;
+        }
+    }
+}

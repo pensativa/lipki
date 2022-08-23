@@ -1,0 +1,106 @@
+<form class="filter">
+    <div class="filter__item filter__item--id">
+        <input id="id" type="text" placeholder="ID об’єкта">
+    </div>
+    <div class="filter__item filter__item--type">
+        <select name="type" id="type">
+            <option>Оренда / Продаж</option>
+            <option value="sale">Продаж</option>
+            <option value="rent">Оренда</option>
+        </select>
+    </div>
+    <div class="filter__item filter__item--var">
+        <select name="type" id="type">
+            <option value="all">Всі об’єкти</option>
+            <option value="flat">Квартира</option>
+            <option value="busines">Комерційна </option>
+            <option value="house">Будинок</option>
+            <option value="erth">Земельна ділянка</option>
+        </select>
+    </div>
+    <div class="filter__item filter__item--f">
+        <div class="btn-group">
+            <button type="button" class="no-btn" id="filterSettings" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" >Фільтр</button>
+            <div class="dropdown-menu  dropdown-menu-end filter__setings" aria-labelledby="filterSettings">
+                <div class="filter__set">
+                    <label>Загальна площа</label>
+                    <input type="text" class="half" placeholder="Мін">
+                    <span class="tab">—</span>
+                    <input type="text" class="half" placeholder="Макс">
+                </div>
+                <div class="filter__set">
+                    <label>Ціна</label>
+                    <input type="text" class="half" placeholder="Мін">
+                    <span class="tab">—</span>
+                    <input type="text" class="half" placeholder="Макс">
+                </div>
+                <div class="filter__set">
+                    <label>Район</label>
+                    <select>
+                        <option>Всі райони</option>
+                        <option>Район 1</option>
+                        <option>Район 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Житлові комплекси</label>
+                    <select>
+                        <option>РК не вибраний</option>
+                        <option>Житлові комплекси 1</option>
+                        <option>Житлові комплекси 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Вулиця</label>
+                    <select>
+                        <option>Усі вулиці</option>
+                        <option>Вулиця 1</option>
+                        <option>Вулиця 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Ремонт</label>
+                    <select>
+                        <option>Ремонт</option>
+                        <option>Ремонт 1</option>
+                        <option>Ремонт 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Кількість кімнат</label>
+                    <div class="filter__checkboxes">
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="1">
+                            <label class="ch-l" for="1">1</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="2">
+                            <label class="ch-l" for="2">2</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="3">
+                            <label class="ch-l" for="3">3</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="4">
+                            <label class="ch-l" for="4">4</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="5">
+                            <label class="ch-l" for="5">5+</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__set">
+                    <label>ID об’єкта</label>
+                    <input type="text" placeholder="Номер">
+                </div>
+                <button class="no-btn filter__reset" type="button">Скинути фільтр</button>
+            </div>
+        </div>
+    </div>
+    <button class="button">
+        Знайти
+        <img src="img/search.svg" alt="">
+    </button>
+</form>
