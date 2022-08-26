@@ -1,0 +1,54 @@
+.main-pagination {
+    margin-left: auto;
+
+    & .pagination {
+        flex-wrap: wrap;
+    }
+
+    & .page-link {
+        background: #FFFFFF;
+        border: 1px solid rgba(204, 203, 203, 0.76);
+        border-radius: 10px!important;
+        font-size: 24px;
+        font-family: $title-font;
+        padding: 10px 10px 11px;
+        text-align: center;
+        min-width: 78px;
+        margin: 0;
+        margin-left: 14px!important;
+        color: #000;
+
+        & img {
+            height: 27px;
+            width: auto;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            background: #E1B164;
+
+            & img {
+                filter: grayscale(1) contrast(0);
+            }
+        }
+    }
+
+    & .page-item.active .page-link {
+        background: #E1B164;
+        border-color: #E1B164;
+        color: #000;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-pagination .page-link {
+        border-radius: 7px!important;
+        font-size: 16px;
+        padding: 3px 5px 6px;
+        min-width: 42px;
+        margin-left: 7px!important;
+    }
+    .main-pagination .page-link img {
+        height: 17px;
+    }
+}

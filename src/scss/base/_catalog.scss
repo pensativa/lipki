@@ -1,0 +1,121 @@
+.catalog .header:not(.open) nav::before,
+.catalog .header:not(.open) nav::after,
+.header.scroll:not(.open) nav::before,
+.header.scroll:not(.open) nav::after  {
+    opacity: 0;
+}
+
+.catalog__banner {
+    background: lightgray url(../img/catalog-banner.jpg) no-repeat center/cover;
+    padding: 138px 0 32px;
+    position: relative;
+}
+
+.catalog__title {
+    font-family: $title-font;
+    font-weight: 400;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 285px;
+
+    &::after {
+        content: '';
+        width: 309px;
+        height: 3px;
+        display: block;
+        margin-top: 20px;
+        background: linear-gradient(90deg, #FFFFFF 0%, rgba(211, 142, 31, 0.26) 103.72%);
+    }
+}
+
+.catalog__filter {
+    width: 70%;
+    margin-left: auto;
+
+    & .nav-tabs {
+        border-bottom: none;
+        margin-left: 50px;
+    }
+
+    & .nav-link {
+        background: #FFFFFF;
+        border-radius: 10px 10px 0px 0px;
+        color: rgba(60, 60, 59, 0.4);
+        font-size: 21px;
+        padding: 11px 46px 10px 30px;
+        margin-left: 22px;
+        border-bottom: 1px solid #E4941B;
+
+        &.active {
+            background: #E1B164;
+            border: 1px solid #E4941B;
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+}
+
+.catalog__items {
+    background: #F8F8F8;
+    padding: 34px 0 97px;
+}
+
+.catalog__list {
+    width: 70%;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalog__list-more {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+
+    & .no-btn {
+        color: $main-color;
+        font-weight: 600;
+        font-size: 22px;
+
+        &:hover {
+            text-shadow: 0 0 3px rgba($main-color, 0.7);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .catalog__title {
+        font-size: 38px;
+        margin-bottom: 85px;
+    }
+    .catalog__filter,
+    .catalog__list {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .catalog__banner {
+        padding: 58px 0 20px;
+    }
+    .catalog__title {
+        font-size: 22px;
+        margin-bottom: 110px;
+
+        &::after {
+            width: 139px;
+            height: 2px;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog__list {
+        justify-content: space-evenly;
+    }
+    .catalog__list-more .no-btn {
+        font-size: 16px;
+    }
+}

@@ -1,27 +1,36 @@
-<form class="filter">
-    <div class="filter__item filter__item--id">
-        <input id="id" type="text" placeholder="ID об’єкта">
-    </div>
-    <div class="filter__item filter__item--type">
+<form class="filter filter--catalog">
+    <div class="filter__item filter__item--var">
+        <label for="type">Тип</label>
         <select name="type" id="type">
+            <option>Всі об’єкти</option>
+            <option value="sale">Квартира</option>
+            <option value="rent">Будинок</option>
+            <option value="sale">Комерція</option>
+        </select>
+    </div>
+    <div class="filter__item filter__item--cat">
+        <label for="cat">Категорія</label>
+        <select name="cat" id="cat">
             <option>Оренда / Продаж</option>
             <option value="sale">Продаж</option>
             <option value="rent">Оренда</option>
         </select>
     </div>
-    <div class="filter__item filter__item--var">
-        <select name="type" id="type">
-            <option value="all">Всі об’єкти</option>
-            <option value="flat">Квартира</option>
-            <option value="busines">Комерційна </option>
-            <option value="house">Будинок</option>
-            <option value="erth">Земельна ділянка</option>
+    <div class="filter__item filter__item--area">
+        <label for="area">Район</label>
+        <select name="area" id="area">
+            <option value="all">Всі райони</option>
+            <option value="flat">Печерський</option>
+            <option value="busines">Шевченківський</option>
+            <option value="house">Дарницький</option>
         </select>
     </div>
     <div class="filter__item filter__item--f">
         <div class="btn-group">
-            <button type="button" class="no-btn" id="filterSettings">Фільтр</button>
-            <div class="filter__setings" aria-labelledby="filterSettings">
+            <button type="button" class="no-btn" id="filterSettings">
+                <img src="img/filter.svg" alt="">
+            </button>
+            <div class="filter__setings">
                 <div class="filter__set">
                     <label>Загальна площа</label>
                     <input type="text" class="half" placeholder="Мін">
@@ -99,8 +108,4 @@
             </div>
         </div>
     </div>
-    <button class="button">
-        Знайти
-        <img src="img/search.svg" alt="">
-    </button>
 </form>

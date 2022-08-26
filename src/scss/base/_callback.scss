@@ -1,0 +1,84 @@
+.callback {
+    background: #E1B164;
+    border-radius: 0 25px 25px 0;
+    padding: 38px 60px 38px 10%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    width: 30vw;
+
+    & p {
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    & .button {
+        width: 100%;
+    }
+}
+
+.callback__title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.callback__form input,
+.callback__form select {
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+    background: transparent;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 38px;
+
+    &::placeholder {
+        color: #fff;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: none;
+        outline: none;
+    }
+
+    & option {
+        color: #000;
+    }
+}
+
+@media (max-width: 1500px) {
+    .callback {
+        padding-left: 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .callback {
+        position: static;
+        width: 90%;
+        margin-top: 65px;
+    }
+}
+
+@media (max-width: 768px) {
+    .callback {
+        padding: 24px 32px 40px;
+        width: 96%;
+    }
+    .callback__title {
+        font-size: 18px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .callback p {
+        text-align: center;
+    }
+    .callback p,
+    .callback__form select {
+        margin-bottom: 15px;
+    }
+}

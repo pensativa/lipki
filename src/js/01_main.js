@@ -41,3 +41,18 @@ if (window.innerWidth > 768) {
 } else {
   frontSlider.disable();
 }
+
+//Show filters
+
+const showOtherFilters = function() {
+  const filterBtn = document.getElementById('filterSettings');
+  const filterBlock = document.querySelector('.filter__setings');
+  if(!filterBtn) {
+    return;
+  }
+  filterBtn.onclick = function() {
+    filterBlock.classList.toggle('show');
+  }
+};
+
+showOtherFilters();

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+				content="">
+	<meta name="keywords"
+				content="">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.svg"
+				type="image/svg+xml">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.webp"
+				type="image/webp">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.png"
+				type="image/x-icon">
+	<link rel="stylesheet"
+				href="css/bootstrap.min.css">
+	<link rel="stylesheet"
+				href="css/swiper.min.css">
+	<link rel="stylesheet"
+				href="css/style.min.css">
+	<title>Lipki Plaza</title>
+</head>
+
+
+<body class="catalog">
+    <header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">МЕНЮ</button>
+                <a href="/"><img src="img/logo.svg" alt="Lipki Plaza logo" class="header__logo" width="280" height="80"></a>
+                <div class="header__contacts">
+                    <div class="social">
+                        <a href="" class="social__item">
+                            <img src="img/whatsapp.svg" alt="whatsapp">
+                        </a>
+                        <a href="" class="social__item">
+                            <img src="img/viber.svg" alt="viber">
+                        </a>
+                        <a href="" class="social__item">
+                            <img src="img/telegram.svg" alt="telegram">
+                        </a>
+                    </div>
+                    <div class="header__phones-toggle"></div>
+                    <div class="header__phones">
+                        <div class="header__phone">
+                            <a href="tel:+380731183090">+380 73 118 30 90</a>
+                            <p class="text">ОРЕНДА</p>
+                        </div>
+                        <div class="header__phone">
+                            <a href="tel:+380731183090">+380 73 118 30 90</a>
+                            <p class="text">ПРОДАЖ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="header__content">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">Продаж</a>
+                        <ul id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                          <li><a class="dropdown-item" href="#">Купити квартиру в Києві</a></li>
+                          <li><a class="dropdown-item" href="#">Купити будинок в Києві</a></li>
+                          <li><a class="dropdown-item" href="#">Купити комерційне приміщення в Києві</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">Оренда</a>
+                        <ul id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                          <li><a class="dropdown-item" href="#">Оренда квартир в Києві</a></li>
+                          <li><a class="dropdown-item" href="#">Оренда квартир в Києві</a></li>
+                          <li><a class="dropdown-item" href="#">Оренда приміщень в Києві</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Власникам</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Про нас</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Послуги</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Новини</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Контакти</a>
+                    </li>
+                </ul>
+                <div class="social social--other">
+                    <a href="" class="social__item">
+                        <img src="img/fb.svg" alt="facebook">
+                    </a>
+                    <a href="" class="social__item">
+                        <img src="img/instagram.svg" alt="instagram">
+                    </a>
+                    <div class="social">
+                        <a href="" class="social__item">
+                            <img src="img/whatsapp.svg" alt="whatsapp">
+                        </a>
+                        <a href="" class="social__item">
+                            <img src="img/viber.svg" alt="viber">
+                        </a>
+                        <a href="" class="social__item">
+                            <img src="img/telegram.svg" alt="telegram">
+                        </a>
+                    </div>
+                </div>
+                <div class="header__lang">
+                    <button class="no-btn active" type="button">ukr</button>
+                    <button class="no-btn" type="button">eng</button>
+                    <button class="no-btn" type="button">ru</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	<main class="main">
+        <section class="catalog__banner">
+            <div class="container">
+                <h1 class="catalog__title">оренда  квартир  в  києві</h1>
+                <div class="catalog__filter">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="city-tab" data-bs-toggle="tab" data-bs-target="#city" type="button" role="tab" aria-controls="city" aria-selected="true">Київ</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="obl-tab" data-bs-toggle="tab" data-bs-target="#obl" type="button" role="tab" aria-controls="obl" aria-selected="false">Київська область</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="city" role="tabpanel" aria-labelledby="city-tab">
+                            <form class="filter filter--catalog">
+    <div class="filter__item filter__item--var">
+        <label for="type">Тип</label>
+        <select name="type" id="type">
+            <option>Всі об’єкти</option>
+            <option value="sale">Квартира</option>
+            <option value="rent">Будинок</option>
+            <option value="sale">Комерція</option>
+        </select>
+    </div>
+    <div class="filter__item filter__item--cat">
+        <label for="cat">Категорія</label>
+        <select name="cat" id="cat">
+            <option>Оренда / Продаж</option>
+            <option value="sale">Продаж</option>
+            <option value="rent">Оренда</option>
+        </select>
+    </div>
+    <div class="filter__item filter__item--area">
+        <label for="area">Район</label>
+        <select name="area" id="area">
+            <option value="all">Всі райони</option>
+            <option value="flat">Печерський</option>
+            <option value="busines">Шевченківський</option>
+            <option value="house">Дарницький</option>
+        </select>
+    </div>
+    <div class="filter__item filter__item--f">
+        <div class="btn-group">
+            <button type="button" class="no-btn" id="filterSettings">
+                <img src="img/filter.svg" alt="">
+            </button>
+            <div class="filter__setings">
+                <div class="filter__set">
+                    <label>Загальна площа</label>
+                    <input type="text" class="half" placeholder="Мін">
+                    <span class="tab">—</span>
+                    <input type="text" class="half" placeholder="Макс">
+                </div>
+                <div class="filter__set">
+                    <label>Ціна</label>
+                    <input type="text" class="half" placeholder="Мін">
+                    <span class="tab">—</span>
+                    <input type="text" class="half" placeholder="Макс">
+                </div>
+                <div class="filter__set">
+                    <label>Район</label>
+                    <select>
+                        <option>Всі райони</option>
+                        <option>Район 1</option>
+                        <option>Район 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Житлові комплекси</label>
+                    <select>
+                        <option>РК не вибраний</option>
+                        <option>Житлові комплекси 1</option>
+                        <option>Житлові комплекси 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Вулиця</label>
+                    <select>
+                        <option>Усі вулиці</option>
+                        <option>Вулиця 1</option>
+                        <option>Вулиця 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Ремонт</label>
+                    <select>
+                        <option>Ремонт</option>
+                        <option>Ремонт 1</option>
+                        <option>Ремонт 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Кількість кімнат</label>
+                    <div class="filter__checkboxes">
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="1">
+                            <label class="ch-l" for="1">1</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="2">
+                            <label class="ch-l" for="2">2</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="3">
+                            <label class="ch-l" for="3">3</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="4">
+                            <label class="ch-l" for="4">4</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="5">
+                            <label class="ch-l" for="5">5+</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__set">
+                    <label>ID об’єкта</label>
+                    <input type="text" placeholder="Номер">
+                </div>
+                <button class="no-btn filter__reset" type="button">Скинути фільтр</button>
+            </div>
+        </div>
+    </div>
+</form>
+                        </div>
+                        <div class="tab-pane fade" id="obl" role="tabpanel" aria-labelledby="obl-tab">
+                            <form class="filter filter--catalog">
+    <div class="filter__item filter__item--var">
+        <label for="type">Тип</label>
+        <select name="type" id="type">
+            <option>Всі об’єкти</option>
+            <option value="sale">Квартира</option>
+            <option value="rent">Будинок</option>
+            <option value="sale">Комерція</option>
+        </select>
+    </div>
+    <div class="filter__item filter__item--cat">
+        <label for="cat">Категорія</label>
+        <select name="cat" id="cat">
+            <option>Оренда / Продаж</option>
+            <option value="sale">Продаж</option>
+            <option value="rent">Оренда</option>
+        </select>
+    </div>
+    <div class="filter__item filter__item--area">
+        <label for="area">Район</label>
+        <select name="area" id="area">
+            <option value="all">Всі райони</option>
+            <option value="flat">Печерський</option>
+            <option value="busines">Шевченківський</option>
+            <option value="house">Дарницький</option>
+        </select>
+    </div>
+    <div class="filter__item filter__item--f">
+        <div class="btn-group">
+            <button type="button" class="no-btn" id="filterSettings">
+                <img src="img/filter.svg" alt="">
+            </button>
+            <div class="filter__setings">
+                <div class="filter__set">
+                    <label>Загальна площа</label>
+                    <input type="text" class="half" placeholder="Мін">
+                    <span class="tab">—</span>
+                    <input type="text" class="half" placeholder="Макс">
+                </div>
+                <div class="filter__set">
+                    <label>Ціна</label>
+                    <input type="text" class="half" placeholder="Мін">
+                    <span class="tab">—</span>
+                    <input type="text" class="half" placeholder="Макс">
+                </div>
+                <div class="filter__set">
+                    <label>Район</label>
+                    <select>
+                        <option>Всі райони</option>
+                        <option>Район 1</option>
+                        <option>Район 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Житлові комплекси</label>
+                    <select>
+                        <option>РК не вибраний</option>
+                        <option>Житлові комплекси 1</option>
+                        <option>Житлові комплекси 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Вулиця</label>
+                    <select>
+                        <option>Усі вулиці</option>
+                        <option>Вулиця 1</option>
+                        <option>Вулиця 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Ремонт</label>
+                    <select>
+                        <option>Ремонт</option>
+                        <option>Ремонт 1</option>
+                        <option>Ремонт 2</option>
+                    </select>
+                </div>
+                <div class="filter__set">
+                    <label>Кількість кімнат</label>
+                    <div class="filter__checkboxes">
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="1">
+                            <label class="ch-l" for="1">1</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="2">
+                            <label class="ch-l" for="2">2</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="3">
+                            <label class="ch-l" for="3">3</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="4">
+                            <label class="ch-l" for="4">4</label>
+                        </div>
+                        <div class="filter__checkbox">
+                            <input type="checkbox" name="rooms" id="5">
+                            <label class="ch-l" for="5">5+</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__set">
+                    <label>ID об’єкта</label>
+                    <input type="text" placeholder="Номер">
+                </div>
+                <button class="no-btn filter__reset" type="button">Скинути фільтр</button>
+            </div>
+        </div>
+    </div>
+</form>
+                        </div>
+                    </div>
+                    <div class="sort">
+                        <div class="sort__item">
+                            <label for="count">Показувати:</label>
+                            <select name="count" id="count">
+                                <option value="15">15</option>
+                                <option value="30">30</option>
+                                <option value="45">45</option>
+                            </select>
+                        </div>
+                        <div class="sort__item">
+                            <label for="vid">Сортувати:</label>
+                            <select name="vid" id="vid">
+                                <option value="Сортувати за">Сортувати за</option>
+                                <option value="Нові">Нові</option>
+                                <option value="Старі">Старі</option>
+                                <option value="Ціна від найвищої">Ціна від найвищої</option>
+                                <option value="Ціна від найнижчої">Ціна від найнижчої</option>
+                                <option value="Площа від більшої">Площа від більшої</option>
+                                <option value="Площа від меншої">Площа від меншої</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="catalog__items">
+            <div class="container">
+                <div class="catalog__list">
+                    <div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div><div class="catalog-item">
+    <div class="catalog-item__top">
+        <img src="img/catalog-item.jpg" alt="" class="catalog-item__img">
+        <p class="catalog-item__type">Оренда</p>
+        <p class="catalog-item__price">2000 $</p>
+    </div>
+    <div class="catalog-item__bottom">
+        <div class="catalog-item__data">
+            <p class="place">Київ<br>Печерський р-н</p>
+            <div class="nums">
+                <p class="metrs">1279 м²</p>
+                <p class="rooms">2</p>
+            </div>
+        </div>
+        <table class="catalog-item__info">
+            <tr>
+                <td class="acc">ID об’єкта</td>
+                <td>000001</td>
+            </tr>
+            <tr>
+                <td class="acc">Вулиця</td>
+                <td>Саксаганського,3</td>
+            </tr>
+            <tr>
+                <td class="acc">ЖК</td>
+                <td>Печерські Липки</td>
+            </tr>
+        </table>
+    </div>
+</div>
+                    <div class="catalog__list-more">
+                        <button class="no-btn">Завантажити ще</button>
+                    </div>
+                    <nav class="main-pagination" aria-label="pagination">
+    <ul class="pagination pagination-lg">
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">1</span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">...</a></li>
+      <li class="page-item"><a class="page-link" href="#">
+        <img src="img/pag.svg" alt="">
+      </a></li>
+    </ul>
+  </nav>
+                </div>
+            </div>                
+            <div class="callback">
+    <h2 class="callback__title">Індивідуальний підбір</h2>
+    <p>Надішліть заявку на індивідуальний підбір нерухомості!</p>
+    <p>Наш менеджер зв'яжеться з вами у найкоротші терміни.</p>
+    <form class="callback__form">
+        <select name="cb-type" id="cb-type">
+            <option value="both">Оренда/Продаж</option>
+            <option value="rent">Оренда</option>
+            <option value="sale">Продаж</option>
+        </select>
+        <input type="text" placeholder="Ваше ім’я">
+        <input type="tel" placeholder="Ваше телефон">
+        <button class="button button--w">ВІДПРАВИТИ</button>
+    </form>
+</div>
+        </section>
+	</main>
+	<footer class="footer">
+    <section class="footer__data">
+        <div class="container">
+            <div class="footer__contacts">
+                <a href="/"><img src="img/logo-w.svg" alt="Lipki Plaza Logo" class="footer__logo"></a>
+                <div class="footer__contact">
+                    <div class="title title-a">Адреса:</div>
+                    <div class="value">вул. М.Драгомирова, 18</div>
+                </div>
+                <div class="footer__contact">
+                    <div class="title title-p">Контакти: </div>
+                    <div class="value">
+                        <div class="header__phone">
+                            <a href="tel:+380731183090">+380 73 118 30 90</a>
+                            <p class="text">ОРЕНДА</p>
+                        </div>
+                        <div class="header__phone">
+                            <a href="tel:+380731183090">+380 73 118 30 90</a>
+                            <p class="text">ПРОДАЖ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__menu">
+                <h4 class="footer__menu-title">Категорії нерухомості</h4>
+                <ul class="footer__menu-list">
+                    <li><a href="" class="footer__menu-link">Оренда квартир у Києві</a></li>
+                    <li><a href="" class="footer__menu-link">Оренда будинків у Києві та області</a></li>
+                    <li><a href="" class="footer__menu-link">Оренда комерційної нерухомості</a></li>
+                    <li><a href="" class="footer__menu-link">Продаж квартир у Києві</a></li>
+                    <li><a href="" class="footer__menu-link">Продаж будинків  у Києві та області</a></li>
+                    <li><a href="" class="footer__menu-link">Продаж  комерційної нерухомості</a></li>
+                </ul>
+            </div>
+            <div class="footer__callback">
+                <h4 class="footer__callback-title">Замовте дзвінок експерта</h4>
+                <p class="footer__callback-text">Необхідна консультація чи безкоштовна оцінка об’єкта нерухомості - залиште заявку та наш експерт обовязково Вам передзвонить.</p>
+                <button class="button">Передзвонити Вам?</button>
+            </div>
+        </div>
+    </section>
+    <section class="footer__copyright">
+        <div class="container">
+            <p>© 2022- “LIPKI PLAZA” всі права захищені</p>
+        </div>
+    </section>
+</footer>
+
+	<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>

@@ -42,32 +42,24 @@ img {
     &:hover,
     &:focus,
     &:active {
+        background: #DFA341;
         color: #fff;
-        box-shadow: 0px 10px 50px rgba(218, 123, 0, 0.45);
+        box-shadow: 0px 25px 45px rgba(209, 147, 47, 0.38);
     }
 }
 
-.button--outline {
-    @include no-btn();
-    padding: 15px 50px 16px;
-    text-transform: uppercase;
-    border-radius: 10px;
-    color: $main-color;
-    border: 1px solid #CCCCCC;
+.button--w {
+    background-color: #fff;
+    color: #C07B0B;
+    padding: 20px;
+    font-weight: 600;
+    border: 1px solid #C07B0B;
 
     &:hover,
     &:focus,
     &:active {
-        color: #fff;
-        background: #B8B8B8;
-        border: 1px solid rgba(128, 128, 128, 0.61);
+        border-color: #fff;
     }
-}
-
-.label {
-    display: block;
-    font-weight: 300;
-    margin-bottom: 18px;
 }
 
 .input {

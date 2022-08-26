@@ -1,0 +1,52 @@
+.sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.sort__item {
+    & label {
+        font-weight: 300;
+        font-size: 22px;
+        margin-right: 20px;
+    }
+
+    & select {
+        @include no-btn();
+        color: #fff;
+        font-weight: 600;
+        font-size: 22px;
+        padding: 10px 20px;
+        background: url('../img/arrow-w.svg') no-repeat center right;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+
+        & option {
+            color: #000;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sort__item:first-child label {
+        display: none;
+    }
+    .sort__item select,
+    .sort__item label {
+        font-size: 14px;
+    }
+    .sort__item select {
+        padding: 10px 23px 10px 10px;
+    }
+    .sort__item label {
+        margin-right: 0;
+    }
+}
