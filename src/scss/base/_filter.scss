@@ -52,14 +52,14 @@
     background-position: bottom 5px left 24px;
     padding: 0 24px;
 
-    & label {
+    & > label {
         font-size: 22px;
         color: $main-color;
         display: block;
         margin-bottom: 5px;
     }
 
-    & select {
+    & > select {
         margin-left: 40px;
         height: 44px;
         width: calc(100% - 40px);
@@ -238,7 +238,7 @@
         padding: 0 10px;
         background-size: 30px;
     }
-    .filter--catalog .filter__item select {
+    .filter--catalog .filter__item > select {
         margin-left: 28px;
         width: calc(100% - 28px);
         font-size: 17px;
@@ -310,7 +310,14 @@
         width: 100%;
         border-right: none;
         border-bottom: 1px solid rgba(204, 203, 203, 0.4);
-        padding: 12px 0 12px 40px;
+        padding: 12px 0 12px;        
+        background-size: 18px;
+        background-position: bottom 16px left;
+    }
+    .filter--catalog .filter__item > select {
+        height: 24px;
+        margin-left: 20px;
+        width: calc(100% - 20px);
     }
     .filter__item--f {
         border-bottom: none;
@@ -374,6 +381,11 @@
     }
     .filter--catalog .filter__item--f .no-btn:not(.filter__reset) {
         width: 100%;
+        background: none;
+    }
+    .filter--catalog .filter__item label,
+    .filter--catalog .filter__item select {
+        font-size: 14px;
     }
 }
 

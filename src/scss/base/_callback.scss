@@ -2,9 +2,9 @@
     background: #E1B164;
     border-radius: 0 25px 25px 0;
     padding: 38px 60px 38px 10%;
-    position: fixed;
+    position: absolute;
     left: 0;
-    bottom: 0;
+    top: 11.2%;
     color: #fff;
     width: 30vw;
 
@@ -26,6 +26,7 @@
 
 .callback__form input,
 .callback__form select {
+    @include no-btn();
     border: 1px solid #FFFFFF;
     border-radius: 15px;
     background: transparent;
@@ -44,6 +45,10 @@
         box-shadow: none;
         outline: none;
     }
+}
+
+.callback__form select {
+    background: url(../img/arrow-w.svg) center right 10px no-repeat;
 
     & option {
         color: #000;
@@ -55,7 +60,11 @@
         padding-left: 60px;
     }
 }
-
+@media (max-width: 1200px) {
+    .callback {
+        top: 9%;
+    }
+}
 @media (max-width: 992px) {
     .callback {
         position: static;

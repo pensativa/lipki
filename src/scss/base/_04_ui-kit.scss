@@ -107,34 +107,44 @@ img {
     list-style: none;
     padding-left: 0;
 
+    & li {
+        margin-bottom: 5px;
+    }
+
     & li::before {
         content: '';
-        width: 10px;
-        height: 10px;
+        width: 7px;
+        height: 7px;
         display: inline-block;
-        vertical-align: baseline;
+        vertical-align: middle;
+        margin-right: 20px;
         background-color: $main-color;
         border-radius: 50%;
-        margin: 0 20px;
     }
 }
 
-.list--ch {
+.list-num {
     list-style: none;
     padding-left: 0;
 
     & li {
         margin-bottom: 15px;
-    }
 
-    & li::before {
-        content: '';
-        width: 11px;
-        height: 10px;
-        display: inline-block;
-        vertical-align: baseline;
-        background: url('../img/ch.svg') no-repeat center;
-        margin-right: 12px;
+        &::before {
+            font-weight: 800;
+            font-size: 35px;
+            vertical-align: middle;
+            background: linear-gradient(180deg, rgba(225, 177, 100, 0.45) 0%, rgba(225, 177, 100, 0) 100%);
+            background-clip: text;
+            color: transparent;
+            margin-right: 12px;
+        }
+    }
+}
+
+@for $i from 1 to 5 {
+    .list-num li:nth-of-type(#{$i}):before {
+        content: '#{$i}';
     }
 }
 
@@ -158,5 +168,9 @@ img {
 @media (max-width: 768px) {
     header, main, footer, .modal {
         font-size: 14px;
+    }
+
+    .list li::before {
+        margin-right: 10px;
     }
 }
