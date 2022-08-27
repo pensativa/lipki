@@ -173,4 +173,13 @@ img {
     .list li::before {
         margin-right: 10px;
     }
+
+    .list-num li {
+        margin-bottom: 10px;
+    }
+
+    .list-num li::before {
+        margin-right: 10px;
+        font-size: 26px;
+    }
 }
