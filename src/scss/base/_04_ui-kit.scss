@@ -27,6 +27,31 @@ img {
     height: auto
 }
 
+.main__title {
+    font-family: $title-font;
+    font-weight: 400;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #000000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &::before,
+    &::after {
+        content: '';
+        width: 309px;
+        height: 2px;
+        display: block;
+        background: linear-gradient(90deg, #D38E1F 0%, rgba(211, 142, 31, 0.26) 103.72%);
+    }
+
+    &::after {
+        background: linear-gradient(-90deg, #D38E1F 0%, rgba(211, 142, 31, 0.26) 103.72%);
+    }
+
+}
+
 .no-btn {
     @include no-btn();
 }
@@ -159,6 +184,13 @@ img {
     }
 }
 
+@media (max-width: 1200px) {
+    .main__title::after, 
+    .main__title::before {
+        width: 200px;
+    }
+}
+
 @media (max-width: 992px) {
     header, main, footer, .modal {
         font-size: 16px;
@@ -181,5 +213,20 @@ img {
     .list-num li::before {
         margin-right: 10px;
         font-size: 26px;
+    }
+
+    .main__title {
+        font-size: 20px;
+        justify-content: space-between;
+    }
+    
+
+    h2.main__title {
+        font-size: 20px;
+    }
+
+    .main__title::after, 
+    .main__title::before {
+        width: 42px;
     }
 }
