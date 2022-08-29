@@ -125,149 +125,16 @@
     </div>
 </header>
 
-	<main class="main contacts">
+	<main class="main service">
         <div class="container">
-            <h1 class="main__title">Контакти</h1>
+            <img src="img/service.webp" alt="ЗДАТИ" class="service__img">
+            <h1 class="main__title">ЗДАТИ</h1>
+            <div class="service__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis, faucibus nunc, vivamus sed lobortis ullamcorper ultricies euismod. Pulvinar id semper lacus, libero. Sed quam orci sagittis volutpat. Elementum cras a nunc, urna elementum, eget sagittis. Quam eget ut sed egestas bibendum sed orci. Adipiscing faucibus tincidunt nam elit praesent vulputate morbi leo diam. Erat integer gravida congue eget. Proin proin in pellentesque pellentesque. Commodo netus morbi mattis eu. Suspendisse gravida turpis libero dignissim platea diam neque tortor. Enim vulputate at amet viverra morbi placerat mauris velit, eu.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis, faucibus nunc, vivamus sed lobortis ullamcorper ultricies euismod. Pulvinar id semper lacus, libero. Sed quam orci sagittis volutpat. Elementum cras a nunc, urna elementum, eget sagittis. Quam eget ut sed egestas bibendum sed orci. Adipiscing faucibus tincidunt nam elit praesent vulputate morbi leo diam. Erat integer gravida congue eget. Proin proin in pellentesque pellentesque. Commodo netus morbi mattis eu. Suspendisse gravida turpis libero dignissim platea diam neque tortor. Enim vulputate at amet viverra morbi placerat mauris velit, eu.</p>
+            </div>
+            <a href="services.html" class="service__link">Повернутись назад</a>
         </div>
-        <section class="cotacts__text">
-            <div class="container">
-                <p>Ви зайшли на сторінку Контакти Агентства нерухомості <b>“Lipki Plaza”.</b></p>
-                <p>Ми будемо раді відповісти на всі ваші запитання. Звертайтеся до нас зручним для вас способом – зателефонувавши, написавши email, залишивши заявку на сайті, звернувшись у профілі компанії у соціальній мережі Facebook або прийшовши до нас в офіс.</p>
-                <p>Наші менеджери допоможуть вам у вирішенні питань, що стосуються житлової чи комерційної нерухомості.</p>
-            </div>
-        </section>
-        <section class="contacts__data">
-            <div class="container">
-                <img src="img/conatacts.webp" alt="" class="contacts__data-img">
-                <div class="contacts__items">
-                    <div class="contacts__item">
-                        <p class="adres">вул. М.Дрогомирова, 18</p>
-                        <div class="header__phone">
-                            <a href="tel:+380731183090">+380 73 118 30 90</a>
-                            <p class="text">ОРЕНДА</p>
-                        </div>
-                        <div class="header__phone">
-                            <a href="tel:+380731183090">+380 73 118 30 90</a>
-                            <p class="text">ПРОДАЖ</p>
-                        </div>
-                    </div>
-                    <div class="contacts__item contacts__item--small">
-                        <p class="title">Графік Роботи:</p>
-                        <table>
-                            <tr>
-                                <td class="acc">Пн-Пт </td>
-                                <td>09:00 - 19:00</td>
-                            </tr>
-                            <tr>
-                                <td class="acc">Сб</td>
-                                <td>10:00 - 18:00</td>
-                            </tr>
-                            <tr>
-                                <td class="acc">Нд</td>
-                                <td>10:00 - 16:00</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <h2 class="main__title">Залишити   заявку</h2>
-                <p class="contacts__prim">* поля обов’язкові до заповнення</p>
-                <form class="modal__form contacts__form">
-                    <div class="modal__item">
-                        <label for="pip">Ваше ПІП*</label>
-                        <div class="input-group">
-                            <span class="input-group-text" id="pip">
-                                <img src="img/user.svg" alt="">
-                            </span>
-                            <input type="text" class="form-control" placeholder="ПІП">
-                        </div>
-                    </div>
-                    <div class="modal__item">
-                        <label for="phone">Телефон*</label>
-                        <div class="input-group">
-                            <span class="input-group-text" id="phone">
-                                <img src="img/phone.svg" alt="">
-                            </span>
-                            <input type="text" class="form-control" placeholder="Телефон">
-                        </div>
-                    </div>
-                    <div class="modal__item">
-                        <label for="email">Email</label>
-                        <div class="input-group">
-                            <span class="input-group-text" id="email">
-                                <img src="img/email.svg" alt="">
-                            </span>
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                    </div>
-                    <label for="text">Ваше повідомлення</label>
-                    <textarea name="text" id="text" rows="7"></textarea>
-                    <div class="modal__footer"><button class="button">ВІДПРАВИТИ</button></div>
-                </form>
-                <h2 class="main__title">“Lipki Plaza” на карті</h2>
-            </div>
-        </section>
-        <section class="contacts__map">
-            <div id="map"></div>
-            <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
-            <script>
-                function initMap() {
-                    map = new google.maps.Map(document.getElementById("map"), {
-                        center: { lat: 50.41028075164014, lng:  30.544878398278968 },
-                        zoom: 15,
-                    });
-                    const styledMapType = new google.maps.StyledMapType(
-                    [
-                        {
-                            "featureType": "administrative.land_parcel",
-                            "elementType": "labels",
-                            "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "poi.business",
-                            "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "poi.park",
-                            "elementType": "labels.text",
-                            "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                            ]
-                        },
-                        {
-                            "featureType": "road.local",
-                            "elementType": "labels",
-                            "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                            ]
-                        }
-                        ],
-                    { name: "Styled Map" }
-                    );
-                map.mapTypes.set("styled_map", styledMapType);
-                map.setMapTypeId("styled_map");
-                    new google.maps.Marker({
-                        position: { lat: 50.41028075164014, lng:  30.544878398278968 },
-                        map: map,
-                        title: "MYSPACE Real Estate",
-                        icon: 'img/locacia.svg',
-                    });
-                }
-
-                window.initMap = initMap;
-            </script>
-        </section>
     </main>
 	<footer class="footer">
     <section class="footer__data">

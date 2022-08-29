@@ -99,6 +99,7 @@
                         center: { lat: 50.41028075164014, lng:  30.544878398278968 },
                         zoom: 15,
                     });
+                    const styledMapType = new google.maps.StyledMapType(
                     [
                         {
                             "featureType": "administrative.land_parcel",
@@ -135,7 +136,11 @@
                             }
                             ]
                         }
-                        ]
+                        ],
+                    { name: "Styled Map" }
+                    );
+                map.mapTypes.set("styled_map", styledMapType);
+                map.setMapTypeId("styled_map");
                     new google.maps.Marker({
                         position: { lat: 50.41028075164014, lng:  30.544878398278968 },
                         map: map,
