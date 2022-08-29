@@ -27,7 +27,7 @@ img {
     height: auto
 }
 
-.main__title {
+.page-title {
     font-family: $title-font;
     font-weight: 400;
     font-size: 45px;
@@ -185,8 +185,8 @@ img {
 }
 
 @media (max-width: 1200px) {
-    .main__title::after, 
-    .main__title::before {
+    .page-title::after, 
+    .page-title::before {
         width: 200px;
     }
 }
@@ -215,18 +215,18 @@ img {
         font-size: 26px;
     }
 
-    .main__title {
+    .page-title {
         font-size: 20px;
         justify-content: space-between;
     }
     
 
-    h2.main__title {
+    h2.page-title {
         font-size: 20px;
     }
 
-    .main__title::after, 
-    .main__title::before {
+    .page-title::after, 
+    .page-title::before {
         width: 42px;
     }
 }
