@@ -56,3 +56,60 @@ const showOtherFilters = function() {
 };
 
 showOtherFilters();
+
+//About team slider
+
+var swiperAbout = new Swiper(".about__slider", {
+  slidesPerView: 4,
+  spaceBetween: 50,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+//Change currency
+
+const changeCurencyProductPrice = function() {
+  const currencyBlock = document.querySelector('.product__data-item.price');
+  if(!currencyBlock) {
+    return;
+  }
+  const currencyButton = currencyBlock.querySelector('.currency');
+  const price = currencyBlock.querySelector('.num');
+  let priceNum = price.innerHTML;
+  let currencySymbol = currencyBlock.querySelector('.cur');
+  currencyButton.onclick = function() {
+    priceNum = price.innerHTML;
+    currencyBlock.classList.toggle('ukr');
+    if (currencyBlock.classList.contains('ukr')) {
+      price.innerHTML = Number(priceNum) * 36;
+      currencySymbol.innerHTML = 'грн.';
+    } else {
+      price.innerHTML = Number(priceNum) / 36;
+      currencySymbol.innerHTML = '$';
+    }
+  };
+};
+
+changeCurencyProductPrice();
+
+var swiperProduct = new Swiper(".product__slider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+var swiperProduct = new Swiper(".product__slider-img", {
+  slidesPerView: 1,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-n",
+    prevEl: ".swiper-button-p",
+  },
+});

@@ -144,53 +144,6 @@
                 <div class="services__callback">
                     <!-- Button trigger modal -->
 <button type="button" class="modal__button no-btn" data-bs-toggle="modal" data-bs-target="#callback">залишити заявку</button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="callback" tabindex="-1" aria-labelledby="callbackLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content modal__contant">
-        <div class="modal-header modal__header">
-          <h5 class="modal-title" id="callbackLabel">Залишити   заявку</h5>
-          <p class="acc">* поля обов’язкові до заповнення</p>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form class="modal__form">
-                <div class="modal__item">
-                    <label for="pip">Ваше ПІП*</label>
-                    <div class="input-group">
-                        <span class="input-group-text" id="pip">
-                            <img src="img/user.svg" alt="">
-                        </span>
-                        <input type="text" class="form-control" placeholder="ПІП">
-                    </div>
-                </div>
-                <div class="modal__item">
-                    <label for="phone">Телефон*</label>
-                    <div class="input-group">
-                        <span class="input-group-text" id="phone">
-                            <img src="img/phone.svg" alt="">
-                        </span>
-                        <input type="text" class="form-control" placeholder="Телефон">
-                    </div>
-                </div>
-                <div class="modal__item">
-                    <label for="email">Email</label>
-                    <div class="input-group">
-                        <span class="input-group-text" id="email">
-                            <img src="img/email.svg" alt="">
-                        </span>
-                        <input type="email" class="form-control" placeholder="Email">
-                    </div>
-                </div>
-                <label for="text">Ваше повідомлення</label>
-                <textarea name="text" id="text" rows="7"></textarea>
-                <div class="modal__footer"><button class="button">ВІДПРАВИТИ</button></div>
-            </form>
-        </div>
-      </div>
-    </div>
-  </div>
                 </div>
             </div>
         </section>
@@ -260,7 +213,7 @@
             <div class="footer__callback">
                 <h4 class="footer__callback-title">Замовте дзвінок експерта</h4>
                 <p class="footer__callback-text">Необхідна консультація чи безкоштовна оцінка об’єкта нерухомості - залиште заявку та наш експерт обовязково Вам передзвонить.</p>
-                <button class="button">Передзвонити Вам?</button>
+                <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#callback">Передзвонити Вам?</button>
             </div>
         </div>
     </section>
@@ -270,6 +223,52 @@
         </div>
     </section>
 </footer>
+  <!-- Modal -->
+  <div class="modal fade" id="callback" tabindex="-1" aria-labelledby="callbackLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modal__contant">
+        <div class="modal-header modal__header">
+          <h5 class="modal-title" id="callbackLabel">Залишити   заявку</h5>
+          <p class="acc">* поля обов’язкові до заповнення</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form class="modal__form">
+                <div class="modal__item">
+                    <label for="pip">Ваше ПІП*</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="pip">
+                            <img src="img/user.svg" alt="">
+                        </span>
+                        <input type="text" class="form-control" placeholder="ПІП">
+                    </div>
+                </div>
+                <div class="modal__item">
+                    <label for="phone">Телефон*</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="phone">
+                            <img src="img/phone.svg" alt="">
+                        </span>
+                        <input type="text" class="form-control" placeholder="Телефон">
+                    </div>
+                </div>
+                <div class="modal__item">
+                    <label for="email">Email</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="email">
+                            <img src="img/email.svg" alt="">
+                        </span>
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                <label for="text">Ваше повідомлення</label>
+                <textarea name="text" id="text" rows="7"></textarea>
+                <div class="modal__footer"><button class="button">ВІДПРАВИТИ</button></div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 	<script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
