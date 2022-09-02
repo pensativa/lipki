@@ -71,20 +71,35 @@
     }
 
     & input,
-    & textarea {
+    & textarea,
+    & select {
+        @include no-btn();
         border: 1px solid #E1B164;
         border-radius: 15px;
         background-color: #fff;
         width: 100%;
+        padding: 18px 29px;
 
         &::placeholder {
             color: #CCCBCB;
         }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0px 20px 50px rgba(88, 88, 88, 0.16);
+        }
     }
 
-    & input {
+    & input,
+    & select {
         height: 63px;
+    }
 
+    & select {
+        max-width: calc(100% - 78px);
+        background-repeat: no-repeat;
+        background-position: right 29px center;
+        background-image: url('../img/arrow-up.svg');
     }
 
     & .input-group-text {
@@ -131,13 +146,19 @@
         width: 100%;
         margin-bottom: 25px;
     }
-    .modal__form input {
+    .modal__form input,
+    .modal__form select {
         height: 45px;
+        padding: 12px 18px;
     }
     .modal__form .input-group-text {
         padding: 4px 12px;
     }
     .modal__footer {
         margin: 60px 0 20px;
+    }
+    .modal__form select {
+        max-width: calc(100% - 58px);
+        background-position: center right 20px;
     }
 }

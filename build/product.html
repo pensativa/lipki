@@ -81,7 +81,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="hosts.html">Власникам</a>
+                      <a class="nav-link" href="owners.html">Власникам</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="about.html">Про нас</a>
@@ -146,7 +146,7 @@
                             <button type="button" class="no-btn currency">грн.</button>
                         </div>
                         <div class="product__data-item">
-                            <button type="button" class="button">дізнатися про об’єкт</button>
+                            <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#callback-product">дізнатися про об’єкт</button>
                         </div>
                     </div>
                     <div class="product__visual">
@@ -196,6 +196,10 @@
                       <div class="product__photo">
                         <img src="img/product.jpg" alt="">
                       </div>
+                    </div>
+                    <div class="swiper-scrollbar product__scrollbar"></div>
+                    <div class="product__back">
+                      <a href="catalog.html">Повернутися до каталогу</a>
                     </div>
                     <div class="product__text">
                         <h3>Опис об'єкта:</h3>
@@ -392,6 +396,40 @@
 </div>
         </section>
 	</main>
+  <div class="modal fade" id="callback-product" tabindex="-1" aria-labelledby="callbackLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modal__contant">
+        <div class="modal-header modal__header">
+          <h5 class="modal-title" id="callbackLabel">ДІЗНАТИСЯ ПРО ОБ'ЄКТ</h5>
+          <p class="acc">Найближчим часом наш консультант зв'яжеться з Вами!</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form class="modal__form">
+                <div class="modal__item">
+                    <label for="bip">Ваше ПІП*</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="bip">
+                            <img src="img/user.svg" alt="">
+                        </span>
+                        <input type="text" class="form-control" placeholder="ПІП">
+                    </div>
+                </div>
+                <div class="modal__item">
+                    <label for="phones">Телефон*</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="phones">
+                            <img src="img/phone.svg" alt="">
+                        </span>
+                        <input type="text" class="form-control" placeholder="Телефон">
+                    </div>
+                </div>
+                <div class="modal__footer"><button class="button">ВІДПРАВИТИ</button></div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
 	<footer class="footer">
     <section class="footer__data">
         <div class="container">
