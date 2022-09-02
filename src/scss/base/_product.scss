@@ -61,7 +61,7 @@
 
 .product__data-item {
     flex: 1 1 auto;
-    padding: 20px 3%;
+    padding: 20px 2%;
     font-weight: 300;
 
     &:not(:last-child) {
@@ -97,14 +97,15 @@
 
 .product__visual {
     display: grid;
-    grid-template-areas: 'A A A A B B'
-                         'A A A A C D';
+    grid-template-columns: repeat(5, 1fr);
+   grid-template-rows:  205px 125px;
     grid-gap: 25px;
     margin-bottom: 40px;
 }
 
 .product__slider-img {
-    grid-area: A;
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
 
     & .swiper-button-n,
     & .swiper-button-p {
@@ -124,6 +125,13 @@
         }
     }
 
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
     & .swiper-button-p {
         transform: translateY(-50%) rotate(180deg);
         left: 9px;
@@ -136,7 +144,8 @@
     border: 1px solid rgba(217, 217, 217, 0.88);
     border-radius: 10px;
     padding: 30px 40px 20px;
-    grid-area: B;
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
 
     & .catalog-item__data .nums p {
         padding-left: 58px;
@@ -163,7 +172,8 @@
 }
 
 .product__video {
-    grid-area: C;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
     background: #FFFFFF;
     border: 1px solid rgba(217, 217, 217, 0.65);
     border-radius: 10px;
@@ -172,7 +182,6 @@
     font-size: 12px;
     text-align: center;
     padding: 23px 15px;
-    width: 210px;
 
     & .acc {
         font-weight: 400;
@@ -194,7 +203,8 @@
 }
 
 .product__photo {
-    grid-area: D;
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
 }
 
 .product__scrollbar {
@@ -282,5 +292,122 @@
         width: 100%;
         margin-right: 0;
         margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1400px) {
+    .product__data-item.price {
+        font-size: 23px;
+    }
+    .product__data-item .button {
+        width: 100%;
+        padding: 13px;
+        white-space: nowrap;
+    }
+    .product__info {
+        padding: 30px 27px 20px;
+    }
+    .product__info .catalog-item__data .nums p {
+        padding-left: 40px;
+        padding-right: 15px;
+        background-size: 35px;
+        line-height: 35px;
+    }
+    .product__info .catalog-item__data .nums .metrs {
+        margin-right: 15px;
+    }
+    .product__info .catalog-item__info td {
+        font-size: 17px;
+    }
+    .product__video {
+        padding: 18px 10px;
+    }
+    .product__video .acc {
+        font-size: 13px;
+    }
+    .product__photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .product__data-item {
+        font-size: 17px;
+    }
+    .product__info .catalog-item__data .nums p {
+        font-size: 16px;
+    }
+    .product__info .catalog-item__info td {
+        font-size: 14px;
+    }
+    .catalog-item__info .acc {
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .product__about {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product__data {
+        display: none;
+    }
+    .main .breadcrumb {
+        margin: 16px 0 25px;
+        font-size: 10px;
+    }
+    .product__title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .product__visual {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 215px 105px;
+        grid-gap: 10px;
+        margin-bottom: 30px;
+
+        & .product__info {
+            display: none;
+        }
+    }
+    .product__scrollbar {
+        width: 100%;
+        height: 4px;
+        margin-bottom: 30px;
+    }
+    .product__scrollbar .swiper-scrollbar-drag {
+        height: 9px;
+        top: -3px;
+    }
+    .product__slider-img {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .product__video {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .product__photo {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .product__text {
+        margin-bottom: 40px
+    }
+    .product__text h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .product__slider .swiper-button-next, .product__slider .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 25px;
+        background-size: 76%;
     }
 }
