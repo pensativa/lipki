@@ -40,7 +40,7 @@
     background: #F8F8F8;
 
     & .callback {
-        top: 0;
+        top: 40px;
     }
 }
 
@@ -55,7 +55,8 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
-    padding: 35px 0;
+    flex-wrap: wrap;
+    padding: 25px 0 15px;
     margin-bottom: 50px;
 }
 
@@ -64,7 +65,7 @@
     padding: 20px 2%;
     font-weight: 300;
 
-    &:not(:last-child) {
+    &:not(.btn-item) {
         border-right: 1px solid #CCCBCB;
     }
 
@@ -77,7 +78,7 @@
         font-weight: 600;
         font-size: 30px;
         color: $main-color;
-        white-space: nowrap;
+        white-space: nowrap;padding: 8px 2%;
 
         & .currency {
             width: 46px;
@@ -95,6 +96,23 @@
     }
 }
 
+.product__data-cat {
+    background: rgba(238, 238, 238, 0.6);
+    border-radius: 7px;
+    padding: 10px 13px;
+    margin: 10px 0 10px 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 16px;
+    color: rgba(60, 60, 59, 0.74);
+
+    & img {
+        max-width: 46px;
+        margin-right: 15px;
+    }
+}
+
 .product__visual {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -103,7 +121,7 @@
     margin-bottom: 40px;
 }
 
-.product__slider-img {
+.product__gallery {
     grid-column: 1 / 4;
     grid-row: 1 / 3;
 
@@ -143,23 +161,30 @@
     background: #FFFFFF;
     border: 1px solid rgba(217, 217, 217, 0.88);
     border-radius: 10px;
-    padding: 30px 40px 20px;
+    padding: 30px 30px 20px;
     grid-column: 4 / 6;
     grid-row: 1 / 2;
 
     & .catalog-item__data .nums p {
-        padding-left: 58px;
-        padding-right: 20px;
-        background-size: 47px;
+        padding-left: 40px;
+        padding-right: 7px;
+        background-size: 35px;
         margin-right: 0;
         font-weight: 300;
         font-size: 19px;
-        line-height: 47px;
+        text-align: right;
+
+        & span {
+            color: #000;
+            display: block;
+            font-weight: 400;
+            font-size: 16px;
+        }
     }
 
     & .catalog-item__data .nums .metrs {
         border-right: 1px solid #CCCBCB;
-        margin-right: 20px;
+        margin-right: 6px;
     }
 
     & .catalog-item__info td {
@@ -182,6 +207,7 @@
     font-size: 12px;
     text-align: center;
     padding: 23px 15px;
+    cursor: pointer;
 
     & .acc {
         font-weight: 400;
@@ -191,7 +217,8 @@
         margin-bottom: 12px;
     }
 
-    & a {
+    &::after {
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -205,6 +232,7 @@
 .product__photo {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
+    cursor: pointer;
 }
 
 .product__scrollbar {
@@ -295,7 +323,24 @@
     }
 }
 
+.product__info-mob {
+    display: none;
+}
+
+@media (max-width: 1550px) {
+    .product__info {
+        padding: 30px 15px 20px;
+    }
+}
+
 @media (max-width: 1400px) {
+    .product__data-item {
+        max-width: 22%;
+
+        &.btn-item {
+            max-width: 265px;
+        }
+    }
     .product__data-item.price {
         font-size: 23px;
     }
@@ -304,17 +349,14 @@
         padding: 13px;
         white-space: nowrap;
     }
-    .product__info {
-        padding: 30px 27px 20px;
-    }
     .product__info .catalog-item__data .nums p {
-        padding-left: 40px;
-        padding-right: 15px;
+        padding-left: 0;
+        padding-bottom: 10px;
         background-size: 35px;
-        line-height: 35px;
+        background-position: bottom left;
     }
-    .product__info .catalog-item__data .nums .metrs {
-        margin-right: 15px;
+    .product__info .catalog-item__data .nums p span {
+        margin-bottom: 7px;
     }
     .product__info .catalog-item__info td {
         font-size: 17px;
@@ -335,10 +377,21 @@
 
 @media (max-width: 1200px) {
     .product__data-item {
-        font-size: 17px;
+        font-size: 15px;
+    }
+    .product__data-item.price {
+        font-size: 20px;
+    }
+    .product__info .catalog-item__data .nums p span {
+        display: none;
     }
     .product__info .catalog-item__data .nums p {
         font-size: 16px;
+        padding-left: 40px;
+        background-size: 30px;
+        line-height: 30px;
+        background-position: center left;
+        padding-bottom: 0;
     }
     .product__info .catalog-item__info td {
         font-size: 14px;
@@ -357,6 +410,76 @@
 @media (max-width: 768px) {
     .product__data {
         display: none;
+    }
+    .product__info-mob {
+        display: block;
+        background: #FFFFFF;
+        border: 1px solid rgba(217, 217, 217, 0.88);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 47px;
+
+        & .price {
+            background: linear-gradient(-277deg, #E1B164 -0.63%, rgba(255, 255, 255, 0) 94.64%);
+            border: 1px solid rgba(225, 177, 100, 0.25);
+            border-radius: 0 7px 7px 0;
+            max-width: 70%;
+            text-align: right;
+            padding: 7px 20px;
+            margin-top: 25px;
+
+            & .num,
+            & .cur {
+                font-weight: 600;
+                font-size: 24px;
+                color: $main-color;
+            }
+
+            & .currency {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background: rgba(204, 203, 203, 0.76);
+                color: #fff;
+                font-weight: 400;
+                font-size: 12px;
+                display: inline-flex;
+                vertical-align: middle;
+                margin-left: 22px;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+        }
+
+        & .content {
+            padding: 20px;
+        }
+
+        & .catalog-item__info {
+            margin-bottom: 26px;
+        }
+
+        & .button {
+            padding: 13px;
+            width: 230px;
+            margin: 0 auto 45px;
+            display: block;
+        }
+    }
+
+    .product__cats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .product__data-cat {
+        padding: 10px 23px 10px 13px;
+        font-size: 13px;
+    }
+    .product__data-cat img {
+        max-width: 30px;
+        margin-right: 4px;
     }
     .main .breadcrumb {
         margin: 16px 0 25px;
@@ -385,7 +508,7 @@
         height: 9px;
         top: -3px;
     }
-    .product__slider-img {
+    .product__gallery {
         grid-column: 1/3;
         grid-row: 1/2;
     }

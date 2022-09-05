@@ -82,28 +82,33 @@ var swiperAbout = new Swiper(".about__slider", {
 //Change currency
 
 const changeCurencyProductPrice = function() {
-  const currencyBlock = document.querySelector('.product__data-item.price');
-  if(!currencyBlock) {
+  const currencyBlocks = document.querySelectorAll('.product__data-item.price');
+  if(!currencyBlocks) {
     return;
   }
-  const currencyButton = currencyBlock.querySelector('.currency');
-  const price = currencyBlock.querySelector('.num');
-  let priceNum = price.innerHTML;
-  let currencySymbol = currencyBlock.querySelector('.cur');
-  currencyButton.onclick = function() {
-    priceNum = price.innerHTML;
-    currencyBlock.classList.toggle('ukr');
-    if (currencyBlock.classList.contains('ukr')) {
-      price.innerHTML = Number(priceNum) * 36;
-      currencySymbol.innerHTML = 'грн.';
-    } else {
-      price.innerHTML = Number(priceNum) / 36;
-      currencySymbol.innerHTML = '$';
-    }
-  };
+  currencyBlocks.forEach(element => {
+    const currencyButton = element.querySelector('.currency');
+    const price = element.querySelector('.num');
+    let priceNum = price.innerHTML;
+    let currencySymbol = element.querySelector('.cur');
+    currencyButton.onclick = function() {
+      priceNum = price.innerHTML;
+      element.classList.toggle('ukr');
+      if (element.classList.contains('ukr')) {
+        price.innerHTML = Number(priceNum) * 36;
+        currencySymbol.innerHTML = 'грн.';
+      } else {
+        price.innerHTML = Number(priceNum) / 36;
+        currencySymbol.innerHTML = '$';
+      }
+    };
+  });
+  
 };
 
 changeCurencyProductPrice();
+
+baguetteBox.run('.product__slider-img');
 
 var swiperProduct = new Swiper(".product__slider", {
   slidesPerView: 1,
@@ -124,6 +129,28 @@ var swiperProduct = new Swiper(".product__slider", {
     },
   },
 });
+
+const changeGallery = function() {
+  const btns = document.querySelectorAll('.product__button');
+  const block = document.querySelector('.product__gallery');
+  const slider = block.innerHTML;
+
+  if (!btns) {
+    return
+  }
+
+  btns.forEach(e => {
+    e.onclick = function() {
+      if (e.classList.contains('product__video')) {
+        block.innerHTML = e.innerHTML;
+      } else {
+        block.innerHTML = slider;
+      }
+    }
+  });
+}
+
+//changeGallery();
 
 var swiperProduct = new Swiper(".product__slider-img", {
   slidesPerView: 1,
