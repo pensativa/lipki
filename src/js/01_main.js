@@ -133,7 +133,8 @@ var swiperProduct = new Swiper(".product__slider", {
 const changeGallery = function() {
   const btns = document.querySelectorAll('.product__button');
   const block = document.querySelector('.product__gallery');
-  const slider = block.innerHTML;
+  const blockSlider = block.innerHTML;
+  const blockVideo = document.querySelector('.product__video').innerHTML;
 
   if (!btns) {
     return
@@ -142,15 +143,17 @@ const changeGallery = function() {
   btns.forEach(e => {
     e.onclick = function() {
       if (e.classList.contains('product__video')) {
-        block.innerHTML = e.innerHTML;
+        block.innerHTML = blockVideo;
+        block.classList.add('video');
       } else {
-        block.innerHTML = slider;
+        block.innerHTML = blockSlider;
+        block.classList.remove('video');
       }
     }
   });
 }
 
-//changeGallery();
+changeGallery();
 
 var swiperProduct = new Swiper(".product__slider-img", {
   slidesPerView: 1,

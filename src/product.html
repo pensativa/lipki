@@ -14,8 +14,8 @@
             <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="/">Агенство нерухомості Lipki Plaza</a></li>
-                  <li class="breadcrumb-item"><a href="catalog.html">Оренда</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Саксаганського, 3</li>
+                  <li class="breadcrumb-item"><a href="catalog.html">Оренда нерухомості</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Оренда 2 кімн. Квартири по вул. Саксаганського</li>
                 </ol>
             </nav>
             <h1 class="product__title">Оренда 2 кімн. Квартири по вул. Саксаганського, 3 , ID 000001</h1>
@@ -54,6 +54,9 @@
                         </div>
                     </div>
                     <div class="product__visual">
+                      <button type="button" class="no-btn button onMap" data-bs-toggle="modal" data-bs-target="#map-product">
+                        <img src="img/map.svg" alt="">
+                      </button>
                       <div class="product__gallery">
                         <div class="swiper product__slider-img">
                             <div class="swiper-wrapper">
@@ -227,6 +230,77 @@
                 </div>
                 <div class="modal__footer"><button class="button">ВІДПРАВИТИ</button></div>
             </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="map-product" tabindex="-1" aria-labelledby="mapLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content modal__contant">
+        <div class="modal-header modal__header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="map"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+            <script>
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById("map"), {
+                        center: { lat: 50.41028075164014, lng:  30.544878398278968 },
+                        zoom: 15,
+                    });
+                    const styledMapType = new google.maps.StyledMapType(
+                    [
+                        {
+                            "featureType": "administrative.land_parcel",
+                            "elementType": "labels",
+                            "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "poi.business",
+                            "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "labels.text",
+                            "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "labels",
+                            "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                            ]
+                        }
+                        ],
+                    { name: "Styled Map" }
+                    );
+                map.mapTypes.set("styled_map", styledMapType);
+                map.setMapTypeId("styled_map");
+                    new google.maps.Marker({
+                        position: { lat: 50.41028075164014, lng:  30.544878398278968 },
+                        map: map,
+                        title: "MYSPACE Real Estate",
+                        icon: 'img/locacia.svg',
+                    });
+                }
+
+                window.initMap = initMap;
+            </script>
         </div>
       </div>
     </div>
