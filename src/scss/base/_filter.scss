@@ -225,6 +225,10 @@
     text-align: right;
 }
 
+.catalog__filter .filter > .button {
+    display: none;
+}
+
 @media (max-width: 1400px) {
     .catalog__filter .nav-link {
         margin-left: 13px;
@@ -347,13 +351,17 @@
             margin-left: 10px;
         }
     }
+    .catalog__filter .filter > .button {
+        display: inline-block;
+    }
     .filter:not(.filter--catalog) .filter__setings {
         width: 514px;
         right: -25px;
         top: 57px;
     }
     .filter--catalog .filter__setings {
-        max-width: calc(100% + 50px);
+        width: 514px;
+        max-width: calc(100vw - 26px);
         top: 60px;
         right: -25px;
     }
@@ -378,7 +386,6 @@
         margin-left: 10px;
     }
     .filter--catalog .filter__item--f {
-        width: 100%;
 
         & .btn-group {
             width: 100%;
