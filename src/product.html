@@ -57,7 +57,8 @@
                       <button type="button" class="no-btn button onMap" data-bs-toggle="modal" data-bs-target="#map-product">
                         <img src="img/map.svg" alt="">
                       </button>
-                      <div class="product__gallery">
+                      <div class="tab-content">
+                      <div class="product__gallery tab-pane active" id="productSlider" role="tabpanel" aria-labelledby="slider-tab" tabindex="0">
                         <div class="swiper product__slider-img">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -73,6 +74,11 @@
                             <div class="swiper-button-n"></div>
                             <div class="swiper-button-p"></div>
                         </div>
+                      </div>
+                      <div class="product__gallery tab-pane" id="productVideo" role="tabpanel" aria-labelledby="video-tab" tabindex="0">
+                        <p class="acc">Огляд 2 кімнатної квартири</p>
+                        <p>Саксаганського, 3 ЖК Печерські Липки</p>
+                      </div>
                       </div>
                       <div class="product__info">
                         <div class="catalog-item__data">
@@ -101,11 +107,14 @@
                         </table>
                       </div>
                       <div class="product__button product__video">
-                        <p class="acc">Огляд 2 кімнатної квартири</p>
-                        <p>Саксаганського, 3 ЖК Печерські Липки</p>
+                        <button class="no-btn" id="productVideo" data-bs-toggle="tab" data-bs-target="#productVideo" type="button" role="tab" aria-controls="productVideo" aria-selected="true">
+                          <img src="img/video-btn.svg" alt="">
+                        </button>
                       </div>
                       <div class="product__button product__photo">
-                        <img src="img/product.jpg" alt="">
+                        <button class="no-btn active" id="productSlider" data-bs-toggle="tab" data-bs-target="#productSlider" type="button" role="tab" aria-controls="productSlider" aria-selected="true">
+                          <img src="img/product.jpg" alt="">
+                        </button>
                       </div>
                     </div>
                     <div class="swiper-scrollbar product__scrollbar"></div>
