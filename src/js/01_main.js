@@ -130,25 +130,24 @@ var swiperProduct = new Swiper(".product__slider", {
   },
 });
 
-const changeGallery = function() {
-  const btns = document.querySelectorAll('.product__button');
-  const block = document.querySelector('.product__gallery');
-  const blockSlider = block.innerHTML;
-  const blockVideo = document.querySelector('.product__video').innerHTML;
-
-  if (!btns) {
+const classTab = function() {
+  const tabs = document.querySelectorAll('.product__tab');
+  if(!tabs) {
     return
   }
+  tabs.forEach(e => {
+    e.classList.remove('active');
+  })
+}
 
-  btns.forEach(e => {
-    e.onclick = function() {
-      if (e.classList.contains('product__video')) {
-        block.innerHTML = blockVideo;
-        block.classList.add('video');
-      } else {
-        block.innerHTML = blockSlider;
-        block.classList.remove('video');
-      }
+const changeGallery = function() {
+  const btns = document.querySelectorAll('.product__button');
+  btns.forEach(btn => {
+    btn.onclick = function(e) {
+      e.preventDefault();
+    classTab();
+      const id = btn.getAttribute('data-target');
+      document.getElementById(id).classList.add('active');
     }
   });
 }

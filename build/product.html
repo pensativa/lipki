@@ -176,7 +176,7 @@
                         <img src="img/map.svg" alt="">
                       </button>
                       <div class="product__gallery">
-                        <div class="swiper product__slider-img">
+                        <div class="product__tab swiper product__slider-img active" id="tabSlider">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
                                 <a href="img/product.jpg"><img src="img/product.jpg" alt=""></a>
@@ -190,6 +190,10 @@
                             </div>
                             <div class="swiper-button-n"></div>
                             <div class="swiper-button-p"></div>
+                        </div>
+                        <div class="product__tab product__gal-video" id="tabVideo">
+                          <p class="acc">Огляд 2 кімнатної квартири</p>
+                          <p>Саксаганського, 3 ЖК Печерські Липки</p>
                         </div>
                       </div>
                       <div class="product__info">
@@ -218,11 +222,11 @@
                             </tr>
                         </table>
                       </div>
-                      <div class="product__button product__video">
+                      <div class="product__button product__video" data-target="tabVideo">
                         <p class="acc">Огляд 2 кімнатної квартири</p>
                         <p>Саксаганського, 3 ЖК Печерські Липки</p>
                       </div>
-                      <div class="product__button product__photo">
+                      <div class="product__button product__photo" data-target="tabSlider">
                         <img src="img/product.jpg" alt="">
                       </div>
                     </div>
